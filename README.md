@@ -15,7 +15,8 @@ What's with the forsterite opacity curve in optool? Is it optool, or am I the pr
 
 * **Fayalite and forsterite opacity files are mixed up**: At first glance, both the opacity curves look similar, and I really believed this was it. But they are not the same. See `optool_fayalite_opacity` and `optool_forsterite_opacity` in `curves`.
 * **$\lambda_{min}$ causing issues**: $\lambda_{min}$ for Forsterite on the userguide is 5 $\mu m$. So what if I just use that as $\lambda_{min}$? It *does* solve the issue of the peak of Forsterite being at about 8000 $g/cm^2$ (it was previously at about 6000 $g/cm^2$), but the curve still looks weird.
-* **Is it the fmaxs?**: Tried with a whole bunch of fmax values. Used 0.999 instead of 1.0 since optool doesn't seem to accept 1.0 as a possible value for the fmax. Does not help.
+* **Is it the fmaxs?**: Tried with a whole bunch of fmax values. Used 0.999 instead of 1.0 since optool doesn't seem to accept 1.0 as a possible value for the fmax. Does not help. Image below:
+![Optool curve Multiple fmax](images/optool_for_a0.1_multf.png "Optool curve multiple fmax")
 * **Output file all good. I plot like an idiot**: I need to cover all bases, okay? I try saving the wavelength and $K_{abs}$ using pandas and the with open file command. Both yield similar results. I also tried plotting $K_{sca}$. No bueno. 
 * **Something's wrong with optool**: Dare I say I'm leaning towards this one at the moment? But of course, I am not wading through the deep, dark, mystical Fortran ocean to figure this one out.
 * **It is my stupidity**: The most likely possibility. But I can't figure out what I am missing. An untestable hypothesis?
