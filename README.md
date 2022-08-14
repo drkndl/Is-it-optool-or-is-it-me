@@ -9,7 +9,8 @@ What's with the forsterite opacity curve in optool? Is it optool, or am I the pr
 
 1. `outputs` contains the output `dustkappa.dat` files from optool. The commands I used to obtain the outputs are provided in line 15 of the output .dat files. 
 2. `opacity.py` is the script I used to plot the opacity curves from the output files of optool.
-3. `images` contain the opacity curves plotted using `opacity.py`.
+3. `optool_check.py` was an earlier script I used to plot opacity curves. It was used to plot the multiple fmax curve (see below).
+4. `images` contain the opacity curves plotted using `opacity.py`.
 
 ### My hypotheses:
 
